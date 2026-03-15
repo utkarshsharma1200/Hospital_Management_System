@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Success | WisdomCore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+    <div class="card shadow-lg p-5 mx-auto text-center" style="max-width: 500px; border-radius: 20px; border: none;">
+        
+        <div class="mb-4">
+            <i class="bi bi-check-circle-fill text-success" style="font-size: 70px;"></i>
+        </div>
+
+        <h2 class="fw-bold text-dark">Payment Successful!</h2>
+        <p class="text-muted">Booking Confirmed by WisdomCore Technologies</p>
+        <hr>
+
+        <div class="bg-white border rounded p-3 mb-4 text-start shadow-sm">
+            <p class="mb-2"><strong><i class="bi bi-person-badge"></i> Doctor:</strong> {{ doc_name }}</p>
+            <p class="mb-2"><strong><i class="bi bi-calendar-event"></i> Date:</strong> {{ date }}</p>
+            <p class="mb-0"><strong><i class="bi bi-clock"></i> Time:</strong> <span class="badge bg-primary">{{ time }}</span></p>
+        </div>
+
+        <div class="d-grid gap-3 mb-4">
+            <button onclick="window.print()" class="btn btn-dark btn-lg">
+                <i class="bi bi-download me-2"></i> Download Receipt
+            </button>
+
+            <a href="https://wa.me/?text=Mera Appointment Confirm ho gaya hai - WisdomCore" target="_blank" class="btn btn-success btn-lg">
+                <i class="bi bi-whatsapp me-2"></i> Share on WhatsApp
+            </a>
+        </div>
+
+        <a href="/appointment/book/" class="text-decoration-none text-primary fw-bold">
+            <i class="bi bi-house-door"></i> Back to Dashboard
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>
